@@ -1,0 +1,4 @@
+2025/11/06-19:17:31.559 1674 Creating DB C:\Users\pc  313\Desktop\whatsapp-ai\backend\src\sessions\session-690ca96e47e3218dd10f2a68\Default\Local Storage\leveldb since it was missing.
+2025/11/06-19:17:31.959 1674 Reusing MANIFEST C:\Users\pc  313\Desktop\whatsapp-ai\backend\src\sessions\session-690ca96e47e3218dd10f2a68\Default\Local Storage\leveldb/MANIFEST-000001
+2025/11/06-19:17:32.384 1674 Recovering log #3
+2025/11/06-19:17:32.386 1674 Reusing old log C:\Users\pc  313\Desktop\whatsapp-ai\backend\src\sessions\session-690ca96e47e3218dd10f2a68\Default\Local Storage\leveldb/000003.log 

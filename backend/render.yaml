@@ -1,0 +1,50 @@
+# ======================================================
+# Wrap AI - Backend (Render Free Hosting Configuration)
+# ======================================================
+
+services:
+  - type: web
+    name: wrap-ai-backend
+    env: node
+    region: oregon   # (choose closest region if needed)
+    plan: free
+    branch: production
+    rootDir: backend
+
+    buildCommand: "npm install"
+    startCommand: "npm run start"
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: PORT
+        value: 8080
+
+      # 🔹 MongoDB connection (Atlas)
+      - key: MONGODB_URI
+        value: "<Your MongoDB Atlas connection string>"
+
+      # 🔹 JWT for login sessions
+      - key: JWT_SECRET
+        value: "mySuperSecret"
+
+      # 🔹 Client URL (frontend on Vercel)
+      - key: CLIENT_URL
+        value: "https://wrap-ai.vercel.app"
+      - key: CLIENT_ORIGIN
+        value: "https://wrap-ai.vercel.app"
+
+      # 🔹 AI Provider (Groq)
+      - key: AI_PROVIDER
+        value: "groq"
+
+      - key: GROQ_API_KEY
+        value: "<Your Groq API Key>"
+
+      # 🔹 Optional: Gemini or DeepSeek backup keys
+      - key: GEMINI_API_KEY
+        value: ""
+
+      - key: DEEPSEEK_API_KEY
+        value: ""

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "wrap-ai-frontend",
+  "builds": [
+    { "src": "vite.config.js", "use": "@vercel/static-build" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "VITE_API_URL": "https://wrapai-backend.onrender.com"
+  },
+  "framework": "vite"
+}

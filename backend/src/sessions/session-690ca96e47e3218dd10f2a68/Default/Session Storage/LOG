@@ -1,0 +1,4 @@
+2025/11/06-19:17:35.504 924 Creating DB C:\Users\pc  313\Desktop\whatsapp-ai\backend\src\sessions\session-690ca96e47e3218dd10f2a68\Default\Session Storage since it was missing.
+2025/11/06-19:17:35.952 924 Reusing MANIFEST C:\Users\pc  313\Desktop\whatsapp-ai\backend\src\sessions\session-690ca96e47e3218dd10f2a68\Default\Session Storage/MANIFEST-000001
+2025/11/06-19:17:35.953 924 Recovering log #3
+2025/11/06-19:17:35.954 924 Reusing old log C:\Users\pc  313\Desktop\whatsapp-ai\backend\src\sessions\session-690ca96e47e3218dd10f2a68\Default\Session Storage/000003.log 
