@@ -64,8 +64,8 @@ app.post('/api/ai/ask/:userId', authMiddleware, ask);
 app.use('/api/config', authMiddleware);
 app.get('/api/config/log-level', getLogLevel);
 app.post('/api/config/log-level', setLogLevel);
-
-const PORT = Number(process.env.PORT || 5000);
+const PORT = Number(process.env.PORT || 8100);
+const HOST = process.env.HOST || '::';
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -94,9 +94,12 @@ tenant.on('connection', (socket) => {
 process.on('uncaughtException', (err) => {
   console.error('Uncaught exception:', err);
 });
+process.on('unhandledRejection', (reason) => {
+  console.error('Unhandled rejection:', reason);
+});
 
-server.listen(PORT, async () => {
+server.listen(PORT, HOST, async () => {
   await connectDB();
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on http://${HOST}:${PORT}`);
   console.log('Use /api/whatsapp/connect/:userId then listen for io events: wa:qr, wa:status, wa:incoming');
 });
